@@ -3,7 +3,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/GameScene.js',
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.join(__dirname, 'dist'),
