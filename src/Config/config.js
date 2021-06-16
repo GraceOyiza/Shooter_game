@@ -1,7 +1,12 @@
 import Phaser from 'phaser';
 import BootScene from './scripts/boot';
+import PreloadScene from './scenes/preload';
+import TitleScene from './scenes/title';
+import CreditsScene from './scenes/credits';
+import GameScene from './scenes/game';
+import LeaderboardScene from './scenes/leaderboard';
 
-const gameContainer = document.getElementById('game');
+const gameContainer = document.getElementById('gameScene');
 
 export default {
   type: Phaser.AUTO,
@@ -11,7 +16,14 @@ export default {
   title: 'Shooter',
   disableContextMenu: true,
   backgroundColor: 0x00000,
-  scene: [BootScene],
+  scene: [
+    BootScene,
+    PreloadScene,
+    TitleScene,
+    CreditsScene,
+    GameScene,
+    LeaderboardScene,
+  ],
   physics: {
     default: 'arcade',
     arcade: {
