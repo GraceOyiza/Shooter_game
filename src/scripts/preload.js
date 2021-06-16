@@ -6,7 +6,7 @@ export default class extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('playerShip', 'assets/Player.png');
+    this.load.image('player', 'assets/Player.png');
 
     this.sectionX = this.sections.main.centerX;
     this.sectionY = this.sections.main.centerY;
@@ -25,5 +25,11 @@ export default class extends Phaser.Scene {
     setTimeout(() => {
       this.scene.start('Title');
     }, 1500);
+  }
+
+  create() {
+    const { sectionX, sectionY, sectionHeight } = this;
+
+    this.add.image(sectionX, sectionY - sectionHeight * 0.05, 'player');
   }
 }
