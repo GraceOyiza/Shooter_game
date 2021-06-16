@@ -8,4 +8,8 @@ export default class extends Phaser.Scene {
   init(data) {
     this.score = data.score;
   }
+
+  preload() {
+    this.load.image('button', 'assets/button_hover.png');
+  }
 }
