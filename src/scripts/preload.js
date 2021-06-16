@@ -6,7 +6,7 @@ export default class extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('playerShip', 'assets/img/playerShip.png');
+    this.load.image('playerShip', 'assets/Player.png');
 
     this.sectionX = this.sections.main.centerX;
     this.sectionY = this.sections.main.centerY;
