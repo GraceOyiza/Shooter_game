@@ -4,4 +4,8 @@ export default class extends Phaser.Scene {
   constructor() {
     super({ key: 'Credits' });
   }
+
+  preload() {
+    this.load.image('button', 'assets/button_hover.png');
+  }
 }
