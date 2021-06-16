@@ -8,4 +8,25 @@ export default class extends Phaser.Scene {
   preload() {
     this.load.image('button', 'assets/button_hover.png');
   }
+
+  create() {
+    const creditsText = this.add.text(0, 0, 'Credits: Grace');
+    creditsText.setPosition(
+      this.sections.main.centerX - creditsText.width / 2,
+      250,
+    );
+
+    const backButton = this.add
+      .sprite(this.sections.main.centerX, 300, 'button')
+      .setInteractive();
+    const backText = this.add.text(0, 0, 'Menu', {
+      fontSize: 24,
+      fill: '#fff',
+    });
+    Phaser.Display.Align.In.Center(backText, backButton);
+
+    backButton.on('pointerup', () => {
+      this.scene.start('Title');
+    });
+  }
 }
