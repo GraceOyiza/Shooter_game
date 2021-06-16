@@ -10,18 +10,18 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    const cameraX = this.cameras.main.centerX;
-    const cameraY = this.cameras.main.centerY;
-    const cameraHeight = this.cameras.main.height;
+    const sectionX = this.sections.main.centerX;
+    const sectionY = this.sections.main.centerY;
+    const sectionHeight = this.sections.main.height;
 
     this.add
-      .image(cameraX, cameraY - cameraHeight * 0.15, 'background')
+      .image(sectionX, sectionY - sectionHeight * 0.15, 'background')
       .setScale(0.8);
 
     const gameTitle = this.add.text(0, 0, 'Bomb', { fontSize: 32 });
     gameTitle.setPosition(
-      cameraX - gameTitle.width / 2,
-      cameraY + cameraHeight * 0.15,
+      sectionX - gameTitle.width / 2,
+      sectionY + sectionHeight * 0.15,
     );
 
     setTimeout(() => {
