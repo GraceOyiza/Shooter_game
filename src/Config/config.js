@@ -1,10 +1,10 @@
 import Phaser from 'phaser';
 import BootScene from './scripts/boot';
-import PreloadScene from './scenes/preload';
-import TitleScene from './scenes/title';
-import CreditsScene from './scenes/credits';
-import GameScene from './scenes/game';
-import LeaderboardScene from './scenes/leaderboard';
+import PreloadScene from './scripts/preload';
+import TitleScene from './scripts/title';
+import CreditsScene from './scripts/credits';
+import GameScene from './scripts/game';
+import LeaderboardScene from './scripts/leaderboard';
 
 const gameContainer = document.getElementById('gameScene');
 
