@@ -34,5 +34,19 @@ export default class extends Phaser.Scene {
           });
       })
       .catch((err) => err);
+
+    // Play again button
+    const playButton = this.add
+      .sprite(
+        this.cameras.main.centerX,
+        this.cameras.main.centerY + 150,
+        'button',
+      )
+      .setInteractive();
+    const text = this.add.text(0, 0, 'Play', { fontSize: 24, fill: '#fff' });
+    Phaser.Display.Align.In.Center(text, playButton);
+
+    playButton.setInteractive();
+    playButton.on('pointerup', () => this.scene.start('Game'));
   }
 }
