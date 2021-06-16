@@ -74,7 +74,7 @@ export default class extends Phaser.Scene {
     });
     Phaser.Display.Align.In.Center(rankingsText, rankingsButton);
     rankingsButton.on('pointerup', () => {
-      this.scene.start('Scoreboards');
+      this.scene.start('Leaderboards');
     });
   }
 }
