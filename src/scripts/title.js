@@ -43,5 +43,38 @@ export default class extends Phaser.Scene {
         };
       }
     });
+    // Credits button
+    const creditsButton = this.add
+      .sprite(
+        this.sections.main.centerX,
+        this.sections.main.centerY + 50,
+        'button',
+      )
+      .setInteractive();
+    const creditsText = this.add.text(0, 0, 'Credits', {
+      fontSize: 24,
+      fill: '#fff',
+    });
+    Phaser.Display.Align.In.Center(creditsText, creditsButton);
+    creditsButton.on('pointerup', () => {
+      this.scene.start('Credits');
+    });
+
+    // Rankings Button
+    const rankingsButton = this.add
+      .sprite(
+        this.sections.main.centerX,
+        this.sections.main.centerY + 50,
+        'button',
+      )
+      .setInteractive();
+    const rankingsText = this.add.text(0, 0, 'Rankings', {
+      fontSize: 24,
+      fill: '#fff',
+    });
+    Phaser.Display.Align.In.Center(rankingsText, rankingsButton);
+    rankingsButton.on('pointerup', () => {
+      this.scene.start('Scoreboards');
+    });
   }
 }
