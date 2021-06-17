@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import scoreboard from './api/scoreboard';
+import scoreboard from '../api/scoreboard';
 
 export default class extends Phaser.Scene {
   constructor() {
@@ -21,23 +21,23 @@ export default class extends Phaser.Scene {
     // Player
     this.player = this.physics.add
       .sprite(0, 0, 'player')
-      .setPosition(this.sections.main.centerX, this.sections.main.centerY)
+      .setPosition(this.cameras.main.centerX, this.cameras.main.centerY)
       .setScale(0.8);
     this.player.setBounce(0.1);
     this.player.setCollideWorldBounds(true);
 
     // Platform (Ground and Sky)
     this.ground = this.add.rectangle(
-      this.sections.main.centerX,
-      this.sections.main.height,
-      this.sections.main.width,
+      this.cameras.main.centerX,
+      this.cameras.main.height,
+      this.cameras.main.width,
       10,
       'transparent',
     );
     this.sky = this.add.rectangle(
-      this.sections.main.centerOnX,
+      this.cameras.main.centerOnX,
       -10,
-      this.sections.main.width,
+      this.cameras.main.width,
       10,
       'transparent',
     );
@@ -51,7 +51,7 @@ export default class extends Phaser.Scene {
       delay: 300,
       callback: () => {
         this.enemies
-          .create(Math.random() * this.sections.main.width, -20, 'enemy')
+          .create(Math.random() * this.cameras.main.width, -20, 'enemy')
           .setScale(0.3)
           .setFlipY()
           .setVelocityY(this.baseVelocity + this.score * 0.5);
@@ -104,8 +104,8 @@ export default class extends Phaser.Scene {
         padding: 10,
       });
       gameOverText.setPosition(
-        this.sections.main.centerX - gameOverText.width / 2,
-        this.sections.main.centerY,
+        this.cameras.main.centerX - gameOverText.width / 2,
+        this.cameras.main.centerY,
       );
 
       setTimeout(() => {
