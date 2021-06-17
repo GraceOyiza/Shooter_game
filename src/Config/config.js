@@ -1,17 +1,17 @@
 import Phaser from 'phaser';
-import BootScene from './scripts/boot';
-import PreloadScene from './scripts/preload';
-import TitleScene from './scripts/title';
-import CreditsScene from './scripts/credits';
-import GameScene from './scripts/game';
-import LeaderboardScene from './scripts/leaderboard';
+import BootScene from '../scripts/boot';
+import PreloadScene from '../scripts/preload';
+import TitleScene from '../scripts/title';
+import CreditsScene from '../scripts/credits';
+import GameScene from '../scripts/gameScene';
+import LeaderboardScene from '../scripts/leaderboards';
 
-const gameContainer = document.getElementById('gameScene');
+const gameContainer = document.getElementById('game');
 
 export default {
   type: Phaser.AUTO,
-  width: gameContainer.clientWidth,
-  height: gameContainer.clientHeight,
+  width: gameContainer.width,
+  height: gameContainer.height,
   parent: 'game',
   title: 'Shooter',
   disableContextMenu: true,
