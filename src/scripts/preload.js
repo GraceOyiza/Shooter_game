@@ -8,9 +8,9 @@ export default class extends Phaser.Scene {
   preload() {
     this.load.image('player', 'assets/Player.png');
 
-    this.sectionX = this.sections.main.centerX;
-    this.sectionY = this.sections.main.centerY;
-    this.sectionHeight = this.sections.main.height;
+    this.sectionX = this.cameras.main.centerX;
+    this.sectionY = this.cameras.main.centerY;
+    this.sectionHeight = this.cameras.main.height;
     const loading = this.add.text(0, 0, '', { fontSize: 24 });
 
     // update progress percentage
