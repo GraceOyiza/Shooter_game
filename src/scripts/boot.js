@@ -10,9 +10,9 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    const sectionX = this.sections.main.centerX;
-    const sectionY = this.sections.main.centerY;
-    const sectionHeight = this.sections.main.height;
+    const sectionX = this.cameras.main.centerX;
+    const sectionY = this.cameras.main.centerY;
+    const sectionHeight = this.cameras.main.height;
 
     this.add
       .image(sectionX, sectionY - sectionHeight * 0.15, 'background')
