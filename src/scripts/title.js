@@ -13,8 +13,8 @@ export default class extends Phaser.Scene {
     // Play button
     const playButton = this.add
       .sprite(
-        this.sections.main.centerX,
-        this.sections.main.centerY - 50,
+        this.cameras.main.centerX,
+        this.cameras.main.centerY - 50,
         'button',
       )
       .setInteractive();
@@ -46,8 +46,8 @@ export default class extends Phaser.Scene {
     // Credits button
     const creditsButton = this.add
       .sprite(
-        this.sections.main.centerX,
-        this.sections.main.centerY + 50,
+        this.cameras.main.centerX,
+        this.cameras.main.centerY + 50,
         'button',
       )
       .setInteractive();
@@ -63,8 +63,8 @@ export default class extends Phaser.Scene {
     // Rankings Button
     const rankingsButton = this.add
       .sprite(
-        this.sections.main.centerX,
-        this.sections.main.centerY + 50,
+        this.cameras.main.centerX,
+        this.cameras.main.centerY + 50,
         'button',
       )
       .setInteractive();
