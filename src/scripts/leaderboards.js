@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import scoreboard from './api/scoreboard';
+import scoreboard from '../api/scoreboard';
 
 export default class extends Phaser.Scene {
   constructor() {
