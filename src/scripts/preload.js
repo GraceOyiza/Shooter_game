@@ -17,7 +17,7 @@ export default class extends Phaser.Scene {
     this.load.on('progress', (value) => {
       loading.setText(`Loading... ${value * 100}%`);
       loading.setPosition(
-        this.sectionXloading.width / 2,
+        this.sectionX - loading.width / 2,
         this.sectionY + this.sectionHeight * 0.05,
       );
     });
@@ -31,5 +31,9 @@ export default class extends Phaser.Scene {
     const { sectionX, sectionY, sectionHeight } = this;
 
     this.add.image(sectionX, sectionY - sectionHeight * 0.05, 'player');
+  }
+
+  ready() {
+    console.log('Preload is ready ');
   }
 }

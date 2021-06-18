@@ -27,7 +27,7 @@ export default class extends Phaser.Scene {
     playButton.setInteractive();
     playButton.on('pointerup', () => {
       if (localStorage.getItem('playerName')) {
-        this.scene.start('Game');
+        this.scene.start('GameScene');
       } else {
         const playerForm = document.getElementById('playerForm');
         playerForm.style.display = 'flex';
@@ -39,7 +39,7 @@ export default class extends Phaser.Scene {
           localStorage.setItem('playerName', playerName);
           playerForm.style.display = 'none';
 
-          this.scene.start('Game');
+          this.scene.start('GameScene');
         };
       }
     });
