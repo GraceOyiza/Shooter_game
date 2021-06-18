@@ -5,4 +5,10 @@ export default class BootScene extends Phaser.Scene {
   constructor() {
     super('UserInfo');
   }
+
+  create() {
+    this.add.image(300, 200, 'background');
+    createUserInputForm();
+    this.model = this.sys.game.globals.model;
+  }
 }
