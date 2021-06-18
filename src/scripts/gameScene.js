@@ -119,4 +119,22 @@ export default class extends Phaser.Scene {
     // Cursor
     this.cursors = this.input.keyboard.createCursorKeys();
   }
+  update() {
+    const velocity = (() => this.baseVelocity + this.score * 0.5)();
+
+    if (this.cursors.left.isDown) {
+      this.player.setVelocityX(-velocity);
+    } else if (this.cursors.right.isDown) {
+      this.player.setVelocityX(velocity);
+    } else if (this.cursors.down.isDown) {
+      this.player.setVelocityY(+velocity);
+    } else if (this.cursors.up.isDown) {
+      this.player.setVelocityY(-velocity);
+    } else {
+      this.player.setVelocityX(0);
+    }
+
+    // Update score
+    this.scoreText.setText(`Score: ${this.score}`);
+  }
 }
