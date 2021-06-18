@@ -1,0 +1,1 @@
+import { saveNameTolocalstorage } from './storage';
