@@ -11,4 +11,11 @@ export default class BootScene extends Phaser.Scene {
     createUserInputForm();
     this.model = this.sys.game.globals.model;
   }
+
+  update() {
+    const formDisplay = document.querySelector('.hide');
+    if (formDisplay) {
+      this.scene.start('Title');
+    }
+  }
 }
