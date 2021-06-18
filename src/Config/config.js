@@ -10,8 +10,8 @@ const gameContainer = document.getElementById('game');
 
 export default {
   type: Phaser.AUTO,
-  width: gameContainer.width,
-  height: gameContainer.height,
+  width: 800,
+  height: 800,
   parent: 'game',
   title: 'Shooter',
   disableContextMenu: true,
