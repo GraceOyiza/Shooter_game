@@ -5,6 +5,7 @@ import TitleScene from '../scripts/title';
 import CreditsScene from '../scripts/credits';
 import GameScene from '../scripts/gameScene';
 import LeaderboardScene from '../scripts/leaderboards';
+import UserinfoScene from '../scripts/userinfo.js';
 
 const gameContainer = document.getElementById('game');
 
