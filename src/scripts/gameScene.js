@@ -4,7 +4,7 @@ import scoreboard from '../api/scoreboard';
 export default class extends Phaser.Scene {
   constructor() {
     super({ key: 'GameScene' });
-    this.baseVelocity = 160;
+    this.baseVelocity = 100;
   }
 
   preload() {
@@ -21,7 +21,7 @@ export default class extends Phaser.Scene {
     // Player
     this.player = this.physics.add
       .sprite(0, 0, 'player')
-      .setPosition(this.cameras.main.centerX, this.cameras.main.centerY)
+      .setPosition(50, 0)
       .setScale(0.8);
     this.player.setBounce(0.1);
     this.player.setCollideWorldBounds(true);
@@ -93,24 +93,12 @@ export default class extends Phaser.Scene {
       this.scene.pause();
 
       // Post player score
-      scoreboard.postScore.call(this, {
-        user: localStorage.getItem('playerName'),
+      scoreboard.postScore({
+        user: localStorage.getItem('playerName') || 'Anonymous',
         score: this.score,
       });
-
-      const gameOverText = this.add.text(0, 0, 'GAME OVER', {
-        fontSize: 24,
-        backgroundColor: 'red',
-        padding: 10,
-      });
-      gameOverText.setPosition(
-        this.cameras.main.centerX - gameOverText.width / 2,
-        this.cameras.main.centerY,
-      );
-
-      setTimeout(() => {
-        this.scene.start('GameOver', { score: this.score });
-      }, 1500);
+      this.scene.stop('GameScene');
+      this.scene.switch('GameOver');
     });
     this.physics.add.collider(this.ground, this.enemies, (_, enemy) => {
       enemy.destroy();

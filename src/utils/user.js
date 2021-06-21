@@ -1,4 +1,5 @@
 import { saveNameTolocalstorage } from './storage';
+import '../index.css';
 
 export const createDomElement = (type, className, text = null) => {
   const element = document.createElement(type);
@@ -31,7 +32,7 @@ export const createUserInputForm = () => {
 
   wrapper.appendChild(formContainer);
 
-  const root = document.querySelector('#display');
+  const root = document.querySelector('#game');
   root.appendChild(wrapper);
   return root;
 };

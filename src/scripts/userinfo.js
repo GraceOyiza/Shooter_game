@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import { createUserInputForm } from '../utils/user';
 
-export default class BootScene extends Phaser.Scene {
+export default class extends Phaser.Scene {
   constructor() {
     super('UserInfo');
   }
@@ -9,7 +9,7 @@ export default class BootScene extends Phaser.Scene {
   create() {
     this.add.image(300, 200, 'background');
     createUserInputForm();
-    this.model = this.sys.game.globals.model;
+    // this.model = this.sys.game.globals.model
   }
 
   update() {

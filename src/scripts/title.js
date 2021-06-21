@@ -26,22 +26,7 @@ export default class extends Phaser.Scene {
 
     playButton.setInteractive();
     playButton.on('pointerup', () => {
-      if (localStorage.getItem('playerName')) {
-        this.scene.start('GameScene');
-      } else {
-        const playerForm = document.getElementById('playerForm');
-        playerForm.style.display = 'flex';
-        playerForm.onsubmit = (e) => {
-          e.preventDefault();
-
-          const playerName = document.getElementById('playerName').value;
-
-          localStorage.setItem('playerName', playerName);
-          playerForm.style.display = 'none';
-
-          this.scene.start('GameScene');
-        };
-      }
+      this.scene.start('GameScene');
     });
     // Credits button
     const creditsButton = this.add
@@ -64,7 +49,7 @@ export default class extends Phaser.Scene {
     const rankingsButton = this.add
       .sprite(
         this.cameras.main.centerX,
-        this.cameras.main.centerY + 50,
+        this.cameras.main.centerY + 150,
         'button',
       )
       .setInteractive();

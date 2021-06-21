@@ -11,8 +11,8 @@ const gameContainer = document.getElementById('game');
 
 export default {
   type: Phaser.AUTO,
-  width: 800,
-  height: 800,
+  width: 600,
+  height: 500,
   parent: 'game',
   title: 'Shooter',
   disableContextMenu: true,
@@ -20,6 +20,7 @@ export default {
   scene: [
     BootScene,
     PreloadScene,
+    UserinfoScene,
     TitleScene,
     CreditsScene,
     GameScene,
