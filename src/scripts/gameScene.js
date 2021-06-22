@@ -98,7 +98,7 @@ export default class extends Phaser.Scene {
         score: this.score,
       });
       this.scene.stop('GameScene');
-      this.scene.switch('GameOver');
+      this.scene.start('GameOver');
     });
     this.physics.add.collider(this.ground, this.enemies, (_, enemy) => {
       enemy.destroy();

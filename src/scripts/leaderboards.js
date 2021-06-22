@@ -3,7 +3,7 @@ import scoreboard from '../api/scoreboard';
 
 export default class extends Phaser.Scene {
   constructor() {
-    super({ key: 'GameOver' });
+    super({ key: 'Leaderboards' });
   }
 
   init(data) {
@@ -44,7 +44,10 @@ export default class extends Phaser.Scene {
         'button',
       )
       .setInteractive();
-    const text = this.add.text(0, 0, 'Play', { fontSize: 24, fill: '#fff' });
+    const text = this.add.text(0, 0, 'Menu', 'Title', {
+      fontSize: 24,
+      fill: '#fff',
+    });
     Phaser.Display.Align.In.Center(text, playButton);
 
     playButton.setInteractive();
