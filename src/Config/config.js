@@ -4,6 +4,7 @@ import PreloadScene from '../scripts/preload';
 import TitleScene from '../scripts/title';
 import CreditsScene from '../scripts/credits';
 import GameScene from '../scripts/gameScene';
+import GameOverScene from '../scripts/GameOver';
 import LeaderboardScene from '../scripts/leaderboards';
 import UserinfoScene from '../scripts/userinfo.js';
 
@@ -24,6 +25,7 @@ export default {
     TitleScene,
     CreditsScene,
     GameScene,
+    GameOverScene,
     LeaderboardScene,
   ],
   physics: {
