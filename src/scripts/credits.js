@@ -13,11 +13,11 @@ export default class extends Phaser.Scene {
     const creditsText = this.add.text(0, 0, 'Credits: Grace');
     creditsText.setPosition(
       this.cameras.main.centerX - creditsText.width / 2,
-      250,
+      150,
     );
 
     const backButton = this.add
-      .sprite(this.cameras.main.centerX, 300, 'button')
+      .sprite(this.cameras.main.centerX, 250, 'button')
       .setInteractive();
     const backText = this.add.text(0, 0, 'Menu', {
       fontSize: 24,
