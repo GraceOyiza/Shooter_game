@@ -21,11 +21,12 @@ export default class extends Phaser.Scene {
     scoreboard
       .getScores()
       .then((data) => {
-        data.result
+        data
           .sort((a, b) => a.score - b.score)
           .reverse()
           .splice(0, 6)
           .forEach((entry) => {
+            console.log(entry);
             scoreboardText += `${entry.user}: ${entry.score}\n`;
             scoreboardList.setText(scoreboardText);
             scoreboardList.setPosition(
@@ -40,17 +41,15 @@ export default class extends Phaser.Scene {
     const playButton = this.add
       .sprite(
         this.cameras.main.centerX,
-        this.cameras.main.centerY + 150,
+        this.cameras.main.centerY + 200,
         'button',
       )
+
       .setInteractive();
-    const text = this.add.text(0, 0, 'Menu', 'Title', {
-      fontSize: 24,
-      fill: '#fff',
-    });
+    const text = this.add.text(0, 0, 'Menu', { fontSize: 24, fill: '#fff' });
     Phaser.Display.Align.In.Center(text, playButton);
 
     playButton.setInteractive();
-    playButton.on('pointerup', () => this.scene.start('Game'));
+    playButton.on('pointerup', () => this.scene.start('Title'));
   }
 }
