@@ -8,8 +8,8 @@ export default class extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('player', 'assets/player.png');
-    this.load.image('enemy', 'assets/enemy.png');
+    this.load.image('player', 'assets/Player.png');
+    this.load.image('enemy', 'assets/rock_type_planet.png');
     this.load.image('laser', 'assets/LaserPlayer.png');
   }
 
@@ -93,12 +93,12 @@ export default class extends Phaser.Scene {
       this.scene.pause();
 
       // Post player score
-      scoreboard.postScore({
-        user: localStorage.getItem('playerName') || 'Anonymous',
-        score: this.score,
-      });
+      scoreboard.postScore(
+        localStorage.getItem('playerName') || 'Anonymous',
+        this.score,
+      );
       this.scene.stop('GameScene');
-      this.scene.start('GameOver');
+      this.scene.switch('GameOver');
     });
     this.physics.add.collider(this.ground, this.enemies, (_, enemy) => {
       enemy.destroy();
