@@ -6,7 +6,7 @@ export default class extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('background', 'assets/background.png');
+    this.load.image('background', 'assets/background.jpg');
   }
 
   create() {
@@ -18,7 +18,7 @@ export default class extends Phaser.Scene {
       .image(sectionX, sectionY - sectionHeight * 0.15, 'background')
       .setScale(0.8);
 
-    const gameTitle = this.add.text(0, 0, 'Bomb', { fontSize: 32 });
+    const gameTitle = this.add.text(0, 0, 'Shooter', { fontSize: 52 });
     gameTitle.setPosition(
       sectionX - gameTitle.width / 2,
       sectionY + sectionHeight * 0.15,
