@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const baseUrl =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
-const gameID = 'KUuGABL1NQkjx9MAmI7c';
+// const gameID = 'QQwMNaoWrEmGbIvM5IXT';
+const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QQwMNaoWrEmGbIvM5IXT/scores/`;
 
 const postScore = async (name, score) => {
   const data = { user: name, score };
+  console.log(data);
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -18,7 +18,7 @@ const postScore = async (name, score) => {
     });
     return response.status === 201;
   } catch (error) {
-    return error.name;
+    return error.message;
   }
 };
 
