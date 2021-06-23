@@ -22,11 +22,31 @@ export default class extends Phaser.Scene {
       fontSize: 24,
       fill: '#fff',
     });
+
     Phaser.Display.Align.In.Center(playText, playButton);
 
     playButton.setInteractive();
     playButton.on('pointerup', () => {
       this.scene.start('GameScene');
+    });
+
+    const menuButton = this.add
+      .sprite(
+        this.cameras.main.centerX,
+        this.cameras.main.centerY - 150,
+        'button',
+      )
+      .setInteractive();
+    const menuText = this.add.text(0, 0, 'Menu', {
+      fontSize: 24,
+      fill: '#fff',
+    });
+
+    Phaser.Display.Align.In.Center(menuText, menuButton);
+
+    menuButton.setInteractive();
+    menuButton.on('pointerup', () => {
+      this.scene.start('Title');
     });
   }
 }
