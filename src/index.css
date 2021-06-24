@@ -10,14 +10,12 @@
   left: 0;
   top: 0;
   bottom: 0;
-  /* background-color: #fff; */
   right: 0;
   width: 600px;
   height: 501px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url('background.png'); */
 }
 
 .hide {
@@ -67,8 +65,4 @@
   border-radius: 50px;
   font-size: 40px;
   margin-top: 20px;
-}
-
-.hide {
-  display: none;
 }

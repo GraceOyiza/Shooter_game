@@ -94,7 +94,7 @@ _npm required_ - [get npm](https://www.npmjs.com/get-npm)
 
 ### Installation
 
-You can always use the [live version](https://guns-of-boom.netlify.app/) to play right away or install it locally using these steps:
+You can always use the [live version](https://adoring-hawking-1d392d.netlify.app) to play right away or install it locally using these steps:
 
 **Clone the repository by running this command in your terminal**
 

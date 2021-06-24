@@ -9,7 +9,6 @@ export default class extends Phaser.Scene {
   create() {
     this.add.image(300, 200, 'background');
     createUserInputForm();
-    // this.model = this.sys.game.globals.model
   }
 
   update() {

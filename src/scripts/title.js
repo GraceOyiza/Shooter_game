@@ -10,7 +10,6 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    // Play button
     const playButton = this.add
       .sprite(
         this.cameras.main.centerX,
@@ -28,7 +27,7 @@ export default class extends Phaser.Scene {
     playButton.on('pointerup', () => {
       this.scene.start('GameScene');
     });
-    // Credits button
+
     const creditsButton = this.add
       .sprite(
         this.cameras.main.centerX,
@@ -45,7 +44,6 @@ export default class extends Phaser.Scene {
       this.scene.start('Credits');
     });
 
-    // Rankings Button
     const rankingsButton = this.add
       .sprite(
         this.cameras.main.centerX,

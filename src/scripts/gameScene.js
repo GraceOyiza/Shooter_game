@@ -14,11 +14,11 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    // Scores
+
     this.score = 0;
     this.scoreText = this.add.text(5, 5, `Score: ${this.score}`);
 
-    // Player
+   
     this.player = this.physics.add
       .sprite(0, 0, 'player')
       .setPosition(50, 0)
@@ -26,7 +26,7 @@ export default class extends Phaser.Scene {
     this.player.setBounce(0.1);
     this.player.setCollideWorldBounds(true);
 
-    // Platform (Ground and Sky)
+   
     this.ground = this.add.rectangle(
       this.cameras.main.centerX,
       this.cameras.main.height,
@@ -45,7 +45,7 @@ export default class extends Phaser.Scene {
     this.physics.add.staticGroup(this.sky);
     this.physics.add.staticGroup(this.ground);
 
-    // Enemies
+  
     this.enemies = this.physics.add.group();
     this.time.addEvent({
       delay: 1500,
@@ -60,7 +60,7 @@ export default class extends Phaser.Scene {
       loop: true,
     });
 
-    // Lasers - Weapons
+   
     this.lasers = this.physics.add.group();
     this.time.addEvent({
       delay: 200,
@@ -80,7 +80,7 @@ export default class extends Phaser.Scene {
       loop: true,
     });
 
-    // Colliders
+    
     this.physics.add.collider(this.enemies, this.lasers, (enemy, laser) => {
       enemy.destroy();
       laser.destroy();
@@ -92,7 +92,7 @@ export default class extends Phaser.Scene {
     this.physics.add.collider(this.player, this.enemies, () => {
       this.scene.pause();
 
-      // Post player score
+     
       scoreboard.postScore(
         localStorage.getItem('playerName') || 'Anonymous',
         this.score,
@@ -104,7 +104,7 @@ export default class extends Phaser.Scene {
       enemy.destroy();
     });
 
-    // Cursor
+   
     this.cursors = this.input.keyboard.createCursorKeys();
   }
 
@@ -123,7 +123,7 @@ export default class extends Phaser.Scene {
       this.player.setVelocityX(0);
     }
 
-    // Update score
+ 
     this.scoreText.setText(`Score: ${this.score}`);
   }
 }

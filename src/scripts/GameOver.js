@@ -10,7 +10,6 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    // Play button
     const playButton = this.add
       .sprite(
         this.cameras.main.centerX,
