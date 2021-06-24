@@ -31,21 +31,46 @@ The objective of this project is to build a simple shooter game with a scoring s
 The User Interface is designed to deliver a very smooth experience. There are four main scenes for User Interface.
 
 - The Boot Scene
-  (screenshot for all scene)
+
   It shows a bar while the game is loading assets
+
+    <p align="center">
+  <img src="screenshots/boot.png">
+  </p>
+
+    <p align="center">
+  <img src="screenshots/user.png">
+  </p>
 
 - The title Scene
 
-It shows the title of the game with three different option; viz, Play, Option, Credits, and Ranking.
+It shows the title of the game with three different option; viz, Play, Credits, and Ranking.
+
+  <p align="center">
+  <img src="screenshots/title.png">
+  </p>
 
 - Credits Scene
+
+  <p align="center">
+  <img src="screenshots/credit.png">
+  </p>
 
 - Game Scene
 
 Contains the UI necessary to play the game.
 
-Ranking Scene
+   <p align="center">
+  <img src="screenshots/gamescene.png">
+  </p>
+
+- Ranking Scene
+
 The name of the user and score appears here
+
+  <p align="center">
+  <img src="screenshots/ranking.png">
+  </p>
 
 ## Live Demo
 
@@ -101,6 +126,13 @@ http://localhost:8080/
 
 ```
 npm run test
+```
+
+## Acknowledgements
+
+- Microverse
+- Opengameart.org
+- Button Image by StumpyStrust
 
 ## Author
 
@@ -117,4 +149,9 @@ Contributions, issues and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/GraceOyiza/Todo_app/issues).
 
 ## Show your support
-```
+
+Give a ⭐️ if you enjoyed this project!
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
