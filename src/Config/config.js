@@ -6,9 +6,7 @@ import CreditsScene from '../scripts/credits';
 import GameScene from '../scripts/gameScene';
 import GameOverScene from '../scripts/GameOver';
 import LeaderboardScene from '../scripts/leaderboards';
-import UserinfoScene from '../scripts/userinfo.js';
-
-const gameContainer = document.getElementById('game');
+import UserinfoScene from '../scripts/userinfo';
 
 export default {
   type: Phaser.AUTO,
