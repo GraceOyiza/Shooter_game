@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "scripts": {
     "test": "jest --testTimeout=10000",
     "build": "webpack",
