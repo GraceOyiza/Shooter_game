@@ -14,11 +14,11 @@ export default class extends Phaser.Scene {
     const playButton = this.add
       .sprite(
         this.cameras.main.centerX,
-        this.cameras.main.centerY - 50,
+        this.cameras.main.centerY - 150,
         'button',
       )
       .setInteractive();
-    const playText = this.add.text(0, 0, 'Play', {
+    const playText = this.add.text(100, 0, 'Play', {
       fontSize: 24,
       fill: '#fff',
     });
@@ -33,7 +33,7 @@ export default class extends Phaser.Scene {
     const menuButton = this.add
       .sprite(
         this.cameras.main.centerX,
-        this.cameras.main.centerY - 150,
+        this.cameras.main.centerY - 50,
         'button',
       )
       .setInteractive();

@@ -15,8 +15,11 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    const scoreboardList = this.add.text(0, 0, '');
-    let scoreboardText = 'RANKINGS';
+    const scoreboardList = this.add.text(0, 0, '', {
+      fontSize: '35px',
+      fill: '#4BB543',
+    });
+    let scoreboardText = 'Top 5 Scores\n\n\n ';
 
     scoreboard
       .getScores()

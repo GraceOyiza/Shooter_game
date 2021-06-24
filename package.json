@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --testTimeout=10000",
     "build": "webpack",
     "watch": "webpack --watch --mode=development",
     "serve": "webpack && npx http-server dist",
@@ -32,6 +32,8 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.5",
+    "jest-canvas-mock": "^2.3.0",
     "style-loader": "^2.0.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
@@ -43,6 +45,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "node-fetch": "^2.6.1",
     "phaser": "^3.55.2",
     "axios": "^0.21.1"
   }

@@ -6,7 +6,7 @@ export default class extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('background', 'assets/background.jpg');
+    this.load.image('background', 'assets/space_shooter.png');
   }
 
   create() {

@@ -10,13 +10,14 @@
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
   right: 0;
   width: 600px;
   height: 501px;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-image: url('background.png'); */
 }
 
 .hide {

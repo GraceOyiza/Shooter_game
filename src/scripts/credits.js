@@ -10,7 +10,10 @@ export default class extends Phaser.Scene {
   }
 
   create() {
-    const creditsText = this.add.text(0, 0, 'Credits: Grace');
+    const creditsText = this.add.text(0, 0, 'Credits: Grace Popoola', {
+      fontSize: '35px',
+      fill: '#4BB543',
+    });
     creditsText.setPosition(
       this.cameras.main.centerX - creditsText.width / 2,
       150,

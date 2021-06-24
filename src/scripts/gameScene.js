@@ -48,7 +48,7 @@ export default class extends Phaser.Scene {
     // Enemies
     this.enemies = this.physics.add.group();
     this.time.addEvent({
-      delay: 300,
+      delay: 1500,
       callback: () => {
         this.enemies
           .create(Math.random() * this.cameras.main.width, -20, 'enemy')
