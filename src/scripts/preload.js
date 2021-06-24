@@ -32,8 +32,4 @@ export default class extends Phaser.Scene {
 
     this.add.image(sectionX, sectionY - sectionHeight * 0.05, 'player');
   }
-
-  ready() {
-    console.log('Preload is ready ');
-  }
 }

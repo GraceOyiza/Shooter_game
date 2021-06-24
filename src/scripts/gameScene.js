@@ -107,6 +107,7 @@ export default class extends Phaser.Scene {
     // Cursor
     this.cursors = this.input.keyboard.createCursorKeys();
   }
+
   update() {
     const velocity = (() => this.baseVelocity + this.score * 0.5)();
 
