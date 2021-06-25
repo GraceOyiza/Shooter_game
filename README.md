@@ -124,7 +124,8 @@ cd Shooter-game
 
 #### Start the server
 
-`$ npm start`
+`$ npm start` or
+`$ npm webpack serve`
 
 **Visit this link to see the game in your browser**
 
