@@ -1,7 +1,6 @@
 import fetch from 'node-fetch';
 
-const url =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QQwMNaoWrEmGbIvM5IXT/scores/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QQwMNaoWrEmGbIvM5IXT/scores/';
 
 const postScore = async (name, score) => {
   const data = { user: name, score };
