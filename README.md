@@ -26,6 +26,16 @@ Choice of assets for the game was obtained from opengameart.org, this includes p
 
 The objective of this project is to build a simple shooter game with a scoring system, using JavaScript ES6, Phaser 3 framework, and other modern technologies.
 
+### Instruction on how to play
+
+Arrow keys control movement
+↑- up arrow key to move the player upward
+↓ - down arrow key to move the player downward
+← - left arrow key to move the player sideways
+→ - right arrow key to move the player sideways
+
+The rocket must hit the rock with the laser shoot while the rock must not hit the rocket. When this happens the game ends.
+
 # User Interface
 
 The User Interface is designed to deliver a very smooth experience. There are four main scenes for User Interface.
@@ -69,7 +79,7 @@ Contains the UI necessary to play the game.
 The name of the user and score appears here
 
   <p align="center">
-  <img src="screenshots/ranking.png">
+  <img src="screenshots/rankings.png">
   </p>
 
 ## Live Demo
