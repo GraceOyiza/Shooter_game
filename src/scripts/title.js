@@ -13,7 +13,7 @@ export default class extends Phaser.Scene {
     const playButton = this.add
       .sprite(
         this.cameras.main.centerX,
-        this.cameras.main.centerY - 50,
+        this.cameras.main.centerY - 100,
         'button',
       )
       .setInteractive();
@@ -31,7 +31,7 @@ export default class extends Phaser.Scene {
     const creditsButton = this.add
       .sprite(
         this.cameras.main.centerX,
-        this.cameras.main.centerY + 50,
+        this.cameras.main.centerY + 20,
         'button',
       )
       .setInteractive();
