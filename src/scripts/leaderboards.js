@@ -27,20 +27,14 @@ export default class extends Phaser.Scene {
         data
           .sort((a, b) => a.score - b.score)
           .reverse()
-          .splice(0, 6)
+          .slice(0, 5)
           .forEach((entry) => {
-            console.log(entry);
             scoreboardText += `${entry.user}: ${entry.score}\n`;
             scoreboardList.setText(scoreboardText);
-            scoreboardList.setPosition(
-              this.section.main.centerX - scoreboardList.width / 2,
-              this.section.main.centerY - scoreboardList.height / 2,
-            );
           });
       })
       .catch((err) => err);
 
-    // Play again button
     const playButton = this.add
       .sprite(
         this.cameras.main.centerX,
