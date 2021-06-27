@@ -11,7 +11,7 @@
     "build": "webpack",
     "watch": "webpack --watch --mode=development",
     "serve": "webpack && npx http-server dist",
-    "start": "webpack-dev-server --open"
+    "start": "webpack serve --mode development --env development"
   },
   "repository": {
     "type": "git",
